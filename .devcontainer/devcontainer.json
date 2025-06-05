@@ -1,0 +1,22 @@
+{
+  "name": "Cross-Cloud API Dev Container",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-azuretools.vscode-docker",
+        "amazonwebservices.aws-toolkit-vscode",
+        "ms-azuretools.vscode-azuremanagement"
+      ]
+    }
+  },
+  "features": {
+    "aws-cli": "latest",
+    "azure-cli": "latest"
+  },
+  "forwardPorts": [1433, 8000],
+  "postCreateCommand": "dotnet restore"
+}
